@@ -8,21 +8,12 @@
 </head>
 
 <body>
-
     <script>
-        let tekst = "Hello World";
-        alert(tekst);
-        let navn = prompt("Hvad er lige du hedder?");
-        if (navn == null) {
-            alert("Goddag min ven");
-        } else if (navn == "") {
-            alert("Goddag min ven");
+        let navn = prompt("Hvad hedder du?");
+        if (navn != null && navn != "") {
+            alert("Goddag " + navn);
         } else {
-            alert("Goddag, " + navn + "!");
-        }
-        let forfra = confirm("Vil du starte forfra?");
-        if (forfra) {
-            location.reload();
+            alert("goddag min ven");
         }
 
     </script>

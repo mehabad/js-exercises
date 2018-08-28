@@ -5,24 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="">
 </head>
 
 <body>
     <script>
-        let length = 9;
-        let width = 20;
-        areal = length * width;
-        console.log("Længden er " + length + " meter og bredden er " + width + " meter. Arealet er " + areal + " kvadratmeter.")
-        if (areal < 100) {
-            console.log("Arealet er for lille!")
-        } else if (areal < 200) {
-            console.log("Arealet er passende");
-        } else {
-            console.log("Arealet er ALT for stort!!");
+        let bredde = Math.round(Math.random() * 50)
+        let højde = 8;
+        const areal = bredde * højde;
+        console.log(areal);
+        if (areal <= 100) {
+            console.log("arealet er for lille");
+        } else if (areal > 100 && areal < 200) {
+            console.log("arealet er passende");
+        } else if (areal >= 200) {
+            console.log("arealet er for stort");
         }
 
     </script>
-</body>
 
-</html>
+</body>

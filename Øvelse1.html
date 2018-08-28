@@ -107,7 +107,35 @@
     </div>
 
     <script>
-
+        const redBut = document.querySelector("#redBut");
+        const yellowBut = document.querySelector("#yellowBut");
+        const blueBut = document.querySelector("#blueBut");
+        redBut.addEventListener("click", red);
+        //Fjern farve
+        //Tilføj rød
+        function red() {
+            nulstil();
+            bold.classList.add("red");
+        }
+        yellowBut.addEventListener("click", yellow);
+        //Fjern farve
+        //Tilføj gul
+        function yellow() {
+            nulstil();
+            bold.classList.add("yellow");
+        }
+        blueBut.addEventListener("click", blue);
+        //Fjern farve
+        //Tilføj blå
+        function blue() {
+            nulstil();
+            bold.classList.add("blue");
+        }
+        bold.addEventListener("click", nulstil);
+        //Fjern farve
+        function nulstil() {
+            bold.classList.remove("yellow", "blue", "red");
+        }
 
     </script>
 

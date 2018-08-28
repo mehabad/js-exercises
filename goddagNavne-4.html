@@ -8,30 +8,16 @@
 </head>
 
 <body>
-
     <script>
-        let tekst = "Hello World";
-        alert(tekst);
-        let fornavn = prompt("Hvad er dit fornavn?");
-        let efternavn = prompt("Hvad er dit efternavn");
-        if (fornavn == null && efternavn == null) {
-            alert("Goddag, min ven!");
-        } else if (fornavn == "" && efternavn == "") {
-            alert("Goddag, min ven!");
-        } else if (fornavn == "" && efternavn == null) {
-            alert("Goddag, min ven!");
-        } else if (fornavn == null && efternavn == "") {
-            alert("Goddag, min ven!");
+        let fornavn = prompt("Dit fornavn");
+        let efternavn = prompt("Dit efternavn");
+        if (fornavn != null && fornavn != "") {
+            alert("Goddag " + fornavn + efternavn);
+        } else if (efternavn != null && efternavn != "") {
+            alert("Goddag " + fornavn + efternavn);
         } else {
-            alert("Hej " + fornavn + " " + efternavn + "!")
+            alert("goddag min ven");
         }
-        /*if (fornavn != null && efternavn != null) {
-            alert("Goddag " + fornavn + efternavn);
-        } else if (fornavn != "" && efternavn != "") {
-            alert("Goddag " + fornavn + efternavn);
-        } else {
-            alert("Goddag min ven!!!!!");
-        }*/
 
     </script>
 
