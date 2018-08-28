@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        let tekst = "Hello World";
+        alert(tekst);
+        let navn = prompt("Hvad er lige du hedder?");
+        if (navn == null) {
+            alert("Goddag min ven");
+        } else if (navn == "") {
+            alert("Goddag min ven");
+        } else {
+            alert("Goddag, " + navn + "!");
+        }
+        let forfra = confirm("Vil du starte forfra?");
+        if (forfra) {
+            location.reload();
+        }
+
+    </script>
+
+</body>
+
+</html>
