@@ -19,6 +19,7 @@
             font-size: 2rem;
             margin: 10px;
         }
+
     </style>
 
 </head>
@@ -33,7 +34,7 @@
     <button id="html">
         html
     </button>
-    <button id="flyt">
+    <button id="slet">
         flyt
     </button>
     <div id="box"></div>
@@ -41,38 +42,29 @@
 
     <script>
         const klik = document.querySelector("#klik");
-        klik.addEventListener("click", visKlik);
+        klik.addEventListener("click", visTekst);
 
-        function visKlik() {
-            box.textContent = "jeg er blevet klikket";
+        function visTekst() {
+            box.textContent = "Jeg er blevet klikket";
         }
-
-
-
         const slet = document.querySelector("#slet");
         slet.addEventListener("click", sletTekst);
 
         function sletTekst() {
-            box.textContent = "";
+            box.textContent = " ";
         }
-
-
         const html = document.querySelector("#html");
-        html.addEventListener("click", insæthtml);
+        html.addEventListener("click", Vishtml);
 
-        function insæthtml() {
-            box.innerHTML = "<h2>HTML</h2> <p>hh </p>"
+        function Vishtml() {
+            document.querySelector("#box").innerHTML = "<h2>Hej</h2> <p>Hej med dig</p>";
         }
+        const flyt = doucment.querySelector("#flyt");
+        flyt.addEventListener("click", flytTekst);
+        const boxHTML = document.querySelector("#box").innerHTML;
+        document.querySelector("#box").innerHTML = "";
+        document.querySelector("#bax").innerHTML = boxHTML;
 
-        const flyt = document.querySelector("#flyt");
-        flyt.addEventListener("click", flythtml);
-
-        function flythtml() {
-            box.textContent = "";
-            let boxtekst = box.innerHTML;
-            bax.innerHTML = boxtekst;
-
-        }
     </script>
 </body>
 
