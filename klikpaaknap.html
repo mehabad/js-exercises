@@ -25,45 +25,43 @@
 </head>
 
 <body>
-    <button id="klik">
-        klik
-    </button>
-    <button id="slet">
-        slet
-    </button>
-    <button id="html">
-        html
-    </button>
-    <button id="slet">
-        flyt
-    </button>
+    <button id="butKlik">klik</button>
+    <button id="butSlet">slet</button>
+    <button id="butHtml">html</button>
+    <button id="butFlyt">flyt</button>
     <div id="box"></div>
     <div id="bax"></div>
 
     <script>
-        const klik = document.querySelector("#klik");
-        klik.addEventListener("click", visTekst);
+        const butKlik = document.querySelector("#butKlik");
+        const butSlet = document.querySelector("#butSlet");
+        const butHtml = document.querySelector("#butHtml");
+        const butFlyt = document.querySelector("#butFlyt");
+        const box = document.querySelector("#box");
+        const bax = document.querySelector("#bax");
+        //let innerHtml = document.querySelector("innerHtml");
+        butKlik.addEventListener("click", skrivKlik);
 
-        function visTekst() {
-            box.textContent = "Jeg er blevet klikket";
+        function skrivKlik() {
+            box.textContent = "KLIK";
         }
-        const slet = document.querySelector("#slet");
-        slet.addEventListener("click", sletTekst);
+        butSlet.addEventListener("click", sletKlik);
 
-        function sletTekst() {
-            box.textContent = " ";
+        function sletKlik() {
+            box.textContent = "";
+            bax.textContent = "";
         }
-        const html = document.querySelector("#html");
-        html.addEventListener("click", Vishtml);
+        butHtml.addEventListener("click", skrivHtml);
 
-        function Vishtml() {
-            document.querySelector("#box").innerHTML = "<h2>Hej</h2> <p>Hej med dig</p>";
+        function skrivHtml() {
+            box.innerHTML = "<h2>Overskrift</h2><p>Tekst</p>"
         }
-        const flyt = doucment.querySelector("#flyt");
-        flyt.addEventListener("click", flytTekst);
-        const boxHTML = document.querySelector("#box").innerHTML;
-        document.querySelector("#box").innerHTML = "";
-        document.querySelector("#bax").innerHTML = boxHTML;
+        butFlyt.addEventListener("click", flytHtml);
+
+        function flytHtml() {
+            box.textContent = "";
+            bax.innerHTML = "<h2>Overskrift</h2><p>Tekst</p>"
+        }
 
     </script>
 </body>
